@@ -1,0 +1,139 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Header (Hero Section) Styles */
+.hero-section {
+    background-image: url('images/header-banner.jpg'); /* This is where your image goes */
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Adjust as needed */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay for better text readability */
+}
+
+.navbar {
+    z-index: 10;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+    padding-right: 5%;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+.hero-content {
+    z-index: 10;
+    margin-bottom: 80px; /* Adjust to position text nicely above basket */
+}
+
+.hero-content h1 {
+    font-size: 3.8em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Fruit Cards Section */
+.fruit-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.fruit-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fruit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fruit-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.fruit-card h3 {
+    margin: 15px 0 10px;
+    color: #4CAF50; /* A nice green */
+}
+
+.fruit-card p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #555;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
